@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/mid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom">
+
+        <ImageView
+            android:id="@+id/image_view"
+            android:layout_width="360dp"
+            android:layout_height="360dp"
+            android:scaleType="centerCrop"
+            android:layout_centerInParent="true"
+            android:background="#E9E9E9"
+            android:layout_gravity="center" />
+
+
+        <LinearLayout
+            android:id="@+id/captureLL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:contextClickable="true"
+            android:clickable="true"
+            android:focusable="true">
+            <ImageView
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_gravity="center"
+                android:background="@drawable/camera" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:text="Capture Image"/>
+
+        </LinearLayout>
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <EditText
+            android:id="@+id/edit_text_file_name"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_centerHorizontal="true"
+            android:hint="Enter file name"
+            android:padding="7dp" />
+
+        <Button
+            android:id="@+id/button_upload"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/edit_text_file_name"
+            android:text="Upload"
+            android:background="@drawable/btn_tr_blue"
+            android:layout_marginBottom="10dp"/>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

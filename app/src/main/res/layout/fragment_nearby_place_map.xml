@@ -1,0 +1,262 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsingTB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:contentScrim="@color/colorPrimary"
+            app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
+            app:title="@string/app_name">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="280dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5">
+
+                    <ImageView
+                        android:id="@+id/placesIV"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        tools:src="@drawable/editicon" />
+
+                    <ProgressBar
+                        android:id="@+id/photoProgrss"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center" />
+
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5.5"
+                    android:orientation="vertical"
+                    android:background="#F6FDFB"
+                    android:paddingLeft="20dp">
+
+                    <TextView
+                        android:id="@+id/placeNameTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                        android:textColor="#222"
+                        android:maxLines="2"
+                        android:textStyle="bold"
+                        android:text="Dhaka restuarant"
+                        app:autoSizeTextType="uniform"
+                        app:autoSizeMinTextSize="14sp"
+                        app:autoSizeMaxTextSize="18sp"
+                        app:autoSizeStepGranularity="2sp"/>
+
+                    <TextView
+                        android:id="@+id/placeLocatinTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                        android:textColor="#222"
+                        android:textStyle="normal"
+                        android:maxLines="2"
+                        android:text="Dhaka restuarant"
+                        android:layout_marginTop="5dp"
+                        app:autoSizeTextType="uniform"
+                        app:autoSizeMinTextSize="13sp"
+                        app:autoSizeMaxTextSize="16sp"
+                        app:autoSizeStepGranularity="2sp"/>
+
+                    <TextView
+                        android:id="@+id/placeOpenStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                        android:textStyle="bold"
+                        android:text="Dhaka restuarant" />
+
+                    <RatingBar
+                        android:id="@+id/ratingBar"
+                        style="?android:attr/ratingBarStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:numStars="5"
+                        android:layout_gravity="center"
+                        android:progressBackgroundTint="@color/gray"
+                        android:progressTint="@color/goldYellow"
+                        android:rating="0.0"
+                        android:stepSize="1.0" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal"
+                        android:padding="3dp"
+                        android:background="@drawable/border_txtview">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                            android:text="Enable Place Alert"
+                            android:textColor="#222"/>
+
+                        <Switch
+                            android:id="@+id/geofenceBtn"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:checked="false"
+                            android:theme="@style/SCBSwitch" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/placeInfoLL"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                            android:text="In Driving Mode"
+                            android:textColor="#222"/>
+
+                        <TableLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center">
+
+                            <TableRow
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:textColor="#222"
+                                    android:text="Distance: " />
+
+                                <TextView
+                                    android:id="@+id/distanceTV"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:textColor="#222"
+                                    android:text="33.5 km " />
+
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:textColor="#222"
+                                    android:text="Duration: " />
+
+                                <TextView
+                                    android:id="@+id/timeTV"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:textColor="#222"
+                                    android:text="43.5 min " />
+
+                            </TableRow>
+                        </TableLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/mapToolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@android:color/transparent"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab2"
+        android:layout_width="37dp"
+        android:layout_height="37dp"
+        android:src="@drawable/ic_send_down"
+        android:tint="@android:color/white"
+        app:layout_anchor="@id/collapsingTB"
+        app:layout_anchorGravity="bottom|center"
+        app:fabCustomSize="37dp"/>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="37dp"
+        android:layout_height="37dp"
+        android:src="@drawable/ic_send_up"
+        android:background="@drawable/fab_background"
+        android:backgroundTint="@color/white"
+        app:layout_anchor="@id/appBarLayout"
+        app:layout_anchorGravity="bottom|center"
+        app:fabCustomSize="37dp"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <me.ictlinkbd.com.projectalpha.util.CustomMapView
+            android:id="@+id/mapview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+    </androidx.core.widget.NestedScrollView>
+
+    <ImageView
+        android:id="@+id/routeIV"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_margin="8dp"
+        android:src="@drawable/route_ic"
+        android:tooltipText="Show Direction"
+        app:layout_anchor="@id/nestedView"
+        app:layout_anchorGravity="bottom|left" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

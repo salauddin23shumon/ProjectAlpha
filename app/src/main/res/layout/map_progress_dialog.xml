@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:id="@+id/progressTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Please Wait"
+            android:textAlignment="center"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:textColor="@color/white"/>
+
+<!--        <ProgressBar-->
+<!--            android:id="@+id/circular_progressBar"-->
+<!--            android:layout_width="150dp"-->
+<!--            android:layout_height="150dp"-->
+<!--            style="?android:progressBarStyleHorizontal"-->
+<!--            android:indeterminate="true"-->
+<!--            android:indeterminateDrawable="@drawable/progress_bar_rotation"/>-->
+
+        <com.mikhaellopez.circularprogressbar.CircularProgressBar
+            android:id="@+id/circular_progressBar"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:cpb_background_progressbar_color="#290466"
+            app:cpb_background_progressbar_width="5dp"
+            app:cpb_progressbar_color="#5015B1"
+            app:cpb_progressbar_width="5dp"
+            app:cpb_round_border="false"
+            app:cpb_indeterminate_mode="true"/>
+
+    </FrameLayout>
+
+
+
+</RelativeLayout>

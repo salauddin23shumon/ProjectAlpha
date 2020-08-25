@@ -1,0 +1,114 @@
+<resources>
+    <string name="app_name">MyTravelGuide</string>
+    <string name="package_name">me.ictlinkbd.com.projectalpha</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <string name="nav_drawer_open">Open Navigation drawer</string>
+    <string name="nav_drawer_close">Close Navigation drawer</string>
+
+    <string name="three_vertical_dot">&#8942;</string>
+    <array name="NearbyPlace">
+        <item>
+            Restaurant
+        </item>
+        <item>
+            Bank
+        </item>
+        <item>
+            ATM
+        </item>
+        <item>
+            Hospital
+        </item>
+        <item>
+            Shopping Mall
+        </item>
+        <item>
+            Bus Station
+        </item>
+        <item>
+            Police Station
+        </item>
+    </array>
+
+    <array name="NearbyPlaceDistance">
+        <item>
+            0.5km
+        </item>
+        <item>
+            1km
+        </item>
+        <item>
+            1.5km
+        </item>
+        <item>
+            2km
+        </item>
+        <item>
+            2.5km
+        </item>
+        <item>
+            3km
+        </item>
+        <item>
+            4km
+        </item>
+        <item>
+            5km
+        </item>
+        <item>
+            10km
+        </item>
+        <item>
+            20km
+        </item>
+    </array>
+
+
+    //############################ Map API Key ##################################
+    <!--    <string name="placeApiKey">AIzaSyBjyaSrpnCAdgcElULxHR23wOouxPOH3Kw</string>-->
+    <string name="hint">Search your City</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <!--    <string name="event"><font color="@color/white">Events</font></string>-->
+    <!--    <string name="weather"><font color="@color/white">Weather</font></string>-->
+    <!--    <string name="location"><font color="@color/white">Location</font></string>-->
+
+    <string name="event">Events</string>
+    <string name="weather">Weather</string>
+    <string name="location">Location</string>
+    <string name="my_events">My Events</string>
+    <string name="event_name">Event Name</string>
+    <string name="event_budget">Event Budget=</string>
+    <string name="upper_limit_perc">100%</string>
+    <string name="lower_limit_perc">0%</string>
+    <string name="budget_remain">Budget Remain=</string>
+    <string name="expandable_child">Child</string>
+    <string name="expandable_group">Group</string>
+    <string name="login">Login</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="signup">Signup</string>
+    <string name="name">Name</string>
+    <string name="contact">Contact</string>
+    <string name="update">Update</string>
+    <string name="choose_photo">Choose Photo</string>
+    <string name="source">Starting Location</string>
+    <string name="destination">Destination</string>
+    <string name="date">Date</string>
+    <string name="budget">Tour Budget</string>
+    <string name="create">Create</string>
+    <string name="update_event">Update Event</string>
+    <string name="save_profile">Save Profile</string>
+    <string name="navigation_drawer_open">drawer open</string>
+    <string name="navigation_drawer_close">drawer close</string>
+    <string name="search">Search</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="action_search">action_search</string>
+    <string name="spinner_dis">select distance</string>
+
+</resources>

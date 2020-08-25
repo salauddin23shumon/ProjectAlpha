@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="4dp"
+    android:layout_marginBottom="4dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    android:padding="8dp"
+    android:background="@drawable/tr_red_shape">
+
+        <TextView
+            android:id="@+id/ui_event_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#fff"
+            android:hint="Dhaka Tour"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/ui_event_create"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ui_event_name"
+            android:textColor="#fff"
+            android:text="Created On : 22/05/2018"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/ui_event_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ui_event_create"
+            android:textColor="#fff"
+            android:text="Starts On : 26/05/2018"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/ui_event_remain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/ui_event_start"
+            android:layout_alignParentRight="true"
+            android:hint="4 days left"
+            android:textColor="#fff"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/ui_event_menu_options"
+            android:layout_width="40dp"
+            android:layout_height="60dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:text="@string/three_vertical_dot"
+            android:textColor="#fff"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+</RelativeLayout>

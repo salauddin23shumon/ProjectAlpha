@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#122A74</color>
+    <color name="colorPrimaryDark">#110129</color>
+    <color name="colorAccent">#6940ff</color>
+    <color name="actionbar_opacity">#33000000</color>
+    <color name="transparentBlack">#96000000</color>
+
+
+    <!--my_customize color-->
+    <color name="pink">#FF52A4</color>
+    <color name="light_green">#64DD17</color>
+    <color name="white">#FFFFFF</color>
+    <color name="gray">#524F4F</color>
+    <color name="red">#DDF30606</color>
+
+    <color name="duskYellow">#FADC4B</color>
+    <color name="goldYellow">#FFDF00</color>
+    <color name="lightGrey">#E9E4E4</color>
+
+    <color name="ratingFillColor">#973CFD</color>
+    <color name="ratingStrokeColor">#252727</color>
+
+</resources>

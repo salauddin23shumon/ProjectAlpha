@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.sadra:AwesomeSpinner:1.5.2@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/35153a4428903c3e367fdc0b02218b74/jetified-AwesomeSpinner-1.5.2/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/35153a4428903c3e367fdc0b02218b74/jetified-AwesomeSpinner-1.5.2/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.sadra/AwesomeSpinner/1.5.2/1cc350cc8fd3b773b68f494a00d37f4fdc7c1165/AwesomeSpinner-1.5.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

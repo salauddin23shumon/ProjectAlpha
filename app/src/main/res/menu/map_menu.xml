@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group android:id="@+id/grp1">
+        <item
+            android:id="@+id/map_traffic"
+            android:checked="true"
+            android:title="Enable Road Traffic" />
+    </group>
+
+    <group>
+    <item
+        android:id="@+id/map_road"
+        android:title="ROAD MAP" />
+
+    <item
+        android:id="@+id/map_satellite"
+        android:title="SATELLITE MAP"/>
+
+    <item
+        android:id="@+id/map_hybrid"
+        android:title="HYBRID MAP" />
+
+    <item
+        android:id="@+id/map_terrain"
+        android:title="TERRAIN  MAP" />
+    </group>
+
+
+</menu>

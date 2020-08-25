@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/sea2">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/ui_eInfo_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/event_name"
+            android:textAlignment="center"
+            android:textSize="25sp"
+            android:textColor="#F4FA35"
+            android:padding="5dp"/>
+
+        <TextView
+            android:id="@+id/ui_eInfo_budget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:hint="@string/event_budget"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textColor="#F8F4F4"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:id="@+id/remainingTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:hint="@string/lower_limit_perc"
+                android:textAlignment="center"
+                android:textSize="15sp"
+                android:textColor="#FFF"/>
+
+            <ProgressBar
+                android:id="@+id/ui_progressBar"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_weight="3" />
+
+            <TextView
+                android:id="@+id/full_budgetTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:text="@string/upper_limit_perc"
+                android:textAlignment="center"
+                android:textColor="#FFF"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/cash_remainTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:text="@string/budget_remain"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textColor="#FFF"/>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/expandableLV_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp">
+
+        <ExpandableListView
+            android:id="@+id/ui_expandable_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" />
+
+    </FrameLayout>
+</LinearLayout>

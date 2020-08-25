@@ -1,0 +1,212 @@
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/swipeRefreshLayouts"
+    android:layout_gravity="center_horizontal"
+    android:background="@drawable/sunset"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="75dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="5dp"
+                android:src="@drawable/ic_location" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="5dp"
+                android:text="Loading"
+                android:textAllCaps="true"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_marginTop="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_temps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                tools:text="24"
+                android:textSize="50sp"
+                android:textStyle="bold"
+                android:textColor="@color/light_green"  />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/temp_img"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/cel" />
+
+
+        </LinearLayout>
+
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            tools:text="HAZE"
+            android:textAllCaps="true"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:textColor="#5effc4" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/back_img"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/ic_weather" />
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="#200486"
+            android:alpha="0.7"
+            android:padding="15dp"
+            android:layout_margin="15dp"
+            >
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/humiditytxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Humidity"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+
+                android:textColor="@android:color/white" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/humidtyWether"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/humiditytxt"
+                android:layout_alignBottom="@+id/humiditytxt"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="88dp"
+                android:layout_marginStart="88dp"
+                android:layout_toEndOf="@+id/maxTemtxt"
+                android:layout_toRightOf="@+id/maxTemtxt"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:textColor="@android:color/white"
+                tools:text="0.0" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/pressureTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/humiditytxt"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:text="Pressure"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+
+                android:textColor="@android:color/white" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/pressureWeather"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/pressureTxt"
+                android:layout_alignBottom="@+id/pressureTxt"
+                android:layout_alignLeft="@+id/humidtyWether"
+                android:layout_alignStart="@+id/humidtyWether"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@android:color/white"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                tools:text="0.0" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/maxTemtxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pressureTxt"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:text="Maximum Temp"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+
+                android:textColor="@android:color/white" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/temMax"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/temMintxt"
+                android:layout_alignLeft="@+id/pressureWeather"
+                android:layout_alignStart="@+id/pressureWeather"
+                android:layout_gravity="center_horizontal"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:textColor="@color/white"
+                android:text="0.0" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/temMintxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/maxTemtxt"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:text="Minimum Temp"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:textColor="@android:color/white" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/temMin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_alignBaseline="@+id/temMintxt"
+                android:layout_alignBottom="@+id/temMintxt"
+                android:layout_alignLeft="@+id/temMax"
+                android:layout_alignStart="@+id/temMax"
+                android:layout_gravity="center_horizontal"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:textColor="@android:color/white"
+                android:text="0.0" />
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

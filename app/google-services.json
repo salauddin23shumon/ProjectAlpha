@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "727851516386",
+    "firebase_url": "https://projectalpha-f9a0b.firebaseio.com",
+    "project_id": "projectalpha-f9a0b",
+    "storage_bucket": "projectalpha-f9a0b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:727851516386:android:6128e204341ef6144639bb",
+        "android_client_info": {
+          "package_name": "me.ictlinkbd.com.projectalpha"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "727851516386-v9amtdr3ks0etdlde4k7kqf8vdr8g0eu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB4_5R_R5MrAhKyS8Uz7ZCATim1w25BTOw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "727851516386-v9amtdr3ks0etdlde4k7kqf8vdr8g0eu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

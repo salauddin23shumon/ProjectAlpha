@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/nearby_row_item_border"
+    android:padding="8dp"
+    android:layout_margin="5dp">
+
+    <TextView
+        android:id="@+id/placeNameTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:text="place name"
+        android:textColor="@color/pink"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        tools:text="name"
+        app:autoSizeTextType="uniform"
+        app:autoSizeMinTextSize="14sp"
+        app:autoSizeMaxTextSize="17sp"
+        app:autoSizeStepGranularity="2sp"/>
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        style="?android:attr/ratingBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/placeNameTV"
+        android:layout_marginTop="5dp"
+        android:numStars="5"
+        android:progressBackgroundTint="@color/lightGrey"
+        android:progressTint="@color/duskYellow"
+        android:rating="0.0"
+        android:stepSize="1.0" />
+
+    <TextView
+        android:id="@+id/placeLocationTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ratingBar"
+        android:layout_marginTop="5dp"
+        android:layout_toEndOf="@+id/placeLocation"
+        android:maxLines="1"
+        android:text="location"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        app:autoSizeTextType="uniform"
+        app:autoSizeMinTextSize="13sp"
+        app:autoSizeMaxTextSize="16sp"
+        app:autoSizeStepGranularity="2sp" />
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="13dp"
+        android:src="@drawable/ic_next" />
+
+    <ImageView
+        android:id="@+id/placeLocation"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_below="@+id/ratingBar"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/ic_placeholder" />
+
+
+</RelativeLayout>
