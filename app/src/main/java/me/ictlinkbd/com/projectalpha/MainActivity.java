@@ -54,6 +54,7 @@ import me.ictlinkbd.com.projectalpha.util.PullData;
 import static me.ictlinkbd.com.projectalpha.util.AppPermission.chkLocationPermission;
 import static me.ictlinkbd.com.projectalpha.util.ConstantValues.ENABLE_GPS_ACCESS;
 import static me.ictlinkbd.com.projectalpha.util.ConstantValues.GPS_ENABLED;
+import static me.ictlinkbd.com.projectalpha.util.ConstantValues.REQUEST_IMAGE_CAPTURE;
 import static me.ictlinkbd.com.projectalpha.util.ConstantValues.REQUEST_LOCATION_ACCESS;
 
 
@@ -81,7 +82,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public static LocationCallback callback;
 
 
-    private static EventBus dataBus=EventBus.getDefault();
+    private static EventBus dataBus = EventBus.getDefault();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -158,9 +159,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.ui_home:
-                Toast.makeText(this, "Home click...", Toast.LENGTH_SHORT).show();
-                break;
             case R.id.ui_menu_logout:
                 onLogOutComplete();
                 break;
@@ -179,7 +177,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         switch (id) {
             case R.id.nav_event:
                 this.fragment = new EventListFragment();
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, this.fragment,"listFragment").commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, this.fragment, "listFragment").commit();
                 getSupportActionBar().setTitle("Event");
                 break;
             case R.id.nav_weather:
@@ -195,13 +193,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.nav_near_by:
                 this.fragment = new NearByPlaceFragment();
                 if (!(fragment instanceof NearByPlaceFragment)) {
-                    if (fragment instanceof  MapFragment){
+                    if (fragment instanceof MapFragment) {
                         getSupportFragmentManager().popBackStack();
 //                        fragment.onDetach();
 //                        getSupportFragmentManager().beginTransaction().remove(fragment).commit();
                         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, this.fragment).addToBackStack("listFragment").commit();
                         getSupportActionBar().setTitle("NearBy Place");
-                    }else {
+                    } else {
                         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, this.fragment).addToBackStack("nearbyplace").commit();
                         getSupportActionBar().setTitle("NearBy Place");
                     }
@@ -345,38 +343,44 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        if (requestCode == REQUEST_LOCATION_ACCESS && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-//            dataBus.post(new DataCarrier(true));
-            Log.d(TAG, "onRequestPermissionsResult: ");
-            getSupportFragmentManager().getFragments().get(0).onRequestPermissionsResult(requestCode,permissions,grantResults);
-        } else {
-            Toast.makeText(MainActivity.this, "u will not allow to use GPS from this app", Toast.LENGTH_SHORT).show();
+        switch (requestCode) {
+            case REQUEST_LOCATION_ACCESS:
+                if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    getSupportFragmentManager().getFragments().get(0).onRequestPermissionsResult(requestCode, permissions, grantResults);
+                } else {
+                    Toast.makeText(MainActivity.this, "u will not allow to use GPS from this app", Toast.LENGTH_SHORT).show();
+                }
+                break;
+            case REQUEST_IMAGE_CAPTURE:
+                Log.d(TAG, "onRequestPermissionsResult: "+requestCode);
+                break;
         }
+
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {           ///called for gpsChecking purpose
         super.onActivityResult(requestCode, resultCode, data);
         Log.e(TAG, "onActivityResult: " + requestCode + "   " + resultCode);
-        getSupportFragmentManager().getFragments().get(0).onActivityResult(requestCode,resultCode,data);
+        getSupportFragmentManager().getFragments().get(0).onActivityResult(requestCode, resultCode, data);
     }
 
 
-    public static void startLocationUpdate(LocationTask location){
+    public static void startLocationUpdate(LocationTask location) {
         Log.d(TAG, "startLocationUpdate: called");
         callback = new LocationCallback() {
             @Override
             public void onLocationResult(LocationResult locationResult) {
                 super.onLocationResult(locationResult);
                 Log.e(TAG, "onLocationResult: " + locationResult.getLocations());
-                CurrentLocation =locationResult.getLastLocation();
+                CurrentLocation = locationResult.getLastLocation();
                 dataBus.post(new DataCarrier(CurrentLocation));
             }
         };
         location.getLocationUpdates(callback);
     }
 
-    public static void stopLocationUpdate(LocationTask location){
+    public static void stopLocationUpdate(LocationTask location) {
         if (callback != null) {
             location.stopLocationUpdate(callback);
         }

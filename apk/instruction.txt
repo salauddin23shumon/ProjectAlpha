@@ -1,0 +1,3 @@
+to watch all functionality, please login as
+email: user1@gmail.com
+pass: 123456

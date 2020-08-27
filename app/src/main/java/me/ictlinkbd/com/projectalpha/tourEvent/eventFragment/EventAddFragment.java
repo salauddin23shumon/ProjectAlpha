@@ -244,8 +244,11 @@ public class EventAddFragment extends Fragment {
     }
 
     @Override
-    public void onDestroy() {
+    public void onStop() {
+        super.onStop();
         ((AppCompatActivity) getActivity()).getSupportActionBar().show();
-        super.onDestroy();
+        Log.d(TAG, "onStop: ");
     }
+
+
 }

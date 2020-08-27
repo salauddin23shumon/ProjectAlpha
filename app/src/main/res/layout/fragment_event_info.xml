@@ -82,7 +82,8 @@
             android:text="@string/budget_remain"
             android:textAlignment="center"
             android:textSize="18sp"
-            android:textColor="#FFF"/>
+            android:textColor="#FFF"
+            android:visibility="invisible"/>
 
     </LinearLayout>
 

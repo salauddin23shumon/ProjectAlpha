@@ -129,6 +129,7 @@ public class EventInfoFragment extends Fragment implements ExpenseAdapter.Expens
         budget_remain = rootView.findViewById(R.id.remainingTV);
         cash_remainTV = rootView.findViewById(R.id.cash_remainTV);
 
+
         Bundle bundle = getArguments();
         if (bundle != null && bundle.containsKey("event")) {
             mEvent = (Event) bundle.getSerializable("event");
@@ -253,6 +254,7 @@ public class EventInfoFragment extends Fragment implements ExpenseAdapter.Expens
     private void updateBudgetProgress(double budget, double totalExpense) {
         Log.d(TAG, "budget: " + budget);
         Log.d(TAG, "budget: " + totalExpense);
+        cash_remainTV.setVisibility(View.VISIBLE);
         double remainingBudget;
         mEventBudget.setText("Budget Status (" + budget + ")");
         mProgressBar.setMax((int) budget);
