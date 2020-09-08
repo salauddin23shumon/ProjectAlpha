@@ -9,9 +9,9 @@ public class ConstantValues {
 
     public static String api_key = "ac27c3ff05135d5e437f974d0e818186";//weather api key
 
-    public static String Nearby_api_key = "AIzaSyBiPmG9ot3VdJRYghrsG8pPL6VL8ALP4d4";
-    public static String direction_api_key = "AIzaSyCI-4RaDocwneRsw2ryTRPMf7NzGV-F1CE";
-    public static String place_api_key = "AIzaSyDdr6xBMPxfhzE7d1RMtwIRltgaWpSGSWk";
+    public static String Nearby_api_key = "YOUR_API_KEY";
+    public static String direction_api_key = "YOUR_API_KEY";
+    public static String place_api_key = "YOUR_API_KEY";
 
 
     public static final int REQUEST_IMAGE_CAPTURE = 11;
