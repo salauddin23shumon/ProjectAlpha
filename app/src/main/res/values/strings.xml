@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">MyTravelGuide</string>
-    <string name="package_name">me.ictlinkbd.com.projectalpha</string>
+    <string name="package_name">com.sss.bitm.projectalpha</string>
 
     <!-- TODO: Remove or change this placeholder text -->
 
@@ -67,16 +67,12 @@
 
 
     //############################ Map API Key ##################################
-    <!--    <string name="placeApiKey">AIzaSyBjyaSrpnCAdgcElULxHR23wOouxPOH3Kw</string>-->
+
     <string name="hint">Search your City</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
-
-    <!--    <string name="event"><font color="@color/white">Events</font></string>-->
-    <!--    <string name="weather"><font color="@color/white">Weather</font></string>-->
-    <!--    <string name="location"><font color="@color/white">Location</font></string>-->
 
     <string name="event">Events</string>
     <string name="weather">Weather</string>

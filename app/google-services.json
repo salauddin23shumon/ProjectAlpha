@@ -8,6 +8,43 @@
   "client": [
     {
       "client_info": {
+        "mobilesdk_app_id": "1:727851516386:android:d13b85ba8bdde25a4639bb",
+        "android_client_info": {
+          "package_name": "com.sss.bitm.projectalpha"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "727851516386-agmi6vpe3lpqj5fd7qt1flhk42qv8lcn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sss.bitm.projectalpha",
+            "certificate_hash": "b3c295a23e6d3b72b2efa7a4cfbb350d5406e13e"
+          }
+        },
+        {
+          "client_id": "727851516386-v9amtdr3ks0etdlde4k7kqf8vdr8g0eu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB4_5R_R5MrAhKyS8Uz7ZCATim1w25BTOw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "727851516386-v9amtdr3ks0etdlde4k7kqf8vdr8g0eu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:727851516386:android:6128e204341ef6144639bb",
         "android_client_info": {
           "package_name": "me.ictlinkbd.com.projectalpha"

@@ -241,7 +241,7 @@
         android:fillViewport="true"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-        <me.ictlinkbd.com.projectalpha.util.CustomMapView
+        <com.sss.bitm.projectalpha.util.CustomMapView
             android:id="@+id/mapview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />

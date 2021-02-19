@@ -291,6 +291,10 @@ com/google/gson/annotations/SerializedName.class
 com/google/gson/annotations/Since.class
 com/google/gson/annotations/Until.class
 com/google/protobuf/ExperimentalApi.class
+com/sss/bitm/projectalpha/map/MapFragment.class
+com/sss/bitm/projectalpha/nearByPlace/NearByPlaceDetailFragment.class
+com/sss/bitm/projectalpha/nearByPlace/NearByPlaceFragment.class
+com/sss/bitm/projectalpha/util/NetworkChecker.class
 dagger/Binds.class
 dagger/BindsInstance.class
 dagger/BindsOptionalOf.class
@@ -440,10 +444,6 @@ kotlin/text/StringsKt__StringsJVMKt.class
 kotlin/text/StringsKt__StringsKt.class
 kotlin/time/ClockKt.class
 kotlin/time/ExperimentalTime.class
-me/ictlinkbd/com/projectalpha/map/MapFragment.class
-me/ictlinkbd/com/projectalpha/nearByPlace/NearByPlaceDetailFragment.class
-me/ictlinkbd/com/projectalpha/nearByPlace/NearByPlaceFragment.class
-me/ictlinkbd/com/projectalpha/util/NetworkChecker.class
 okhttp3/Address.class
 okhttp3/Cache.class
 okhttp3/CacheControl.class
@@ -561,7 +561,6 @@ retrofit2/ParameterHandler$RelativeUrl.class
 retrofit2/ParameterHandler$Tag.class
 retrofit2/ParameterHandler.class
 retrofit2/Platform$Android.class
-retrofit2/Platform$Java8.class
 retrofit2/Platform.class
 retrofit2/RequestBuilder.class
 retrofit2/RequestFactory$Builder.class

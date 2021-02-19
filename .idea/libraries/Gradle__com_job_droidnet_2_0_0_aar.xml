@@ -1,8 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: com.job:droidnet:2.0.0@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/64277f111af12ca6c047fad34e54948d/droidnet-2.0.0/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/64277f111af12ca6c047fad34e54948d/droidnet-2.0.0/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/bcbafdd5ae562ffcbb5b2c56917ee2de/jetified-droidnet-2.0.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/bcbafdd5ae562ffcbb5b2c56917ee2de/jetified-droidnet-2.0.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/bcbafdd5ae562ffcbb5b2c56917ee2de/jetified-droidnet-2.0.0/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.job/droidnet/2.0.0/7d8c6cb3388f741666a3da387339b46f010fd074/droidnet-2.0.0-javadoc.jar!/" />

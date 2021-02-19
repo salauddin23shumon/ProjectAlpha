@@ -4,7 +4,7 @@
     <string name="firebase_database_url" translatable="false">https://projectalpha-f9a0b.firebaseio.com</string>
     <string name="gcm_defaultSenderId" translatable="false">727851516386</string>
     <string name="google_api_key" translatable="false">AIzaSyB4_5R_R5MrAhKyS8Uz7ZCATim1w25BTOw</string>
-    <string name="google_app_id" translatable="false">1:727851516386:android:6128e204341ef6144639bb</string>
+    <string name="google_app_id" translatable="false">1:727851516386:android:d13b85ba8bdde25a4639bb</string>
     <string name="google_crash_reporting_api_key" translatable="false">AIzaSyB4_5R_R5MrAhKyS8Uz7ZCATim1w25BTOw</string>
     <string name="google_storage_bucket" translatable="false">projectalpha-f9a0b.appspot.com</string>
     <string name="project_id" translatable="false">projectalpha-f9a0b</string>
